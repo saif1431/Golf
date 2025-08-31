@@ -179,7 +179,7 @@ bgColor: '#F4BB33',
             <p className=' text-center leading-tight'>The M-System will elevate your golf game, whether you’re a beginner, junior player eyeing college, a pro honing skills,or a weekend enthusiast. Gain a clear, repetitive swing for daily consistency. Master control and enjoy the game. Experience a dramatic improvement in your golf skills. It’s not just a promise ­– it’s a guarantee.
 
 </p>
-<button className='bg-[#C51518] hover:bg-[#A41215] text-white py-2 px-6 rounded-md'>SIGN UP NOW</button>
+<button className='btn-primary text-white py-2 px-6 rounded-md'>SIGN UP NOW</button>
       </section>
     </div>
   );
