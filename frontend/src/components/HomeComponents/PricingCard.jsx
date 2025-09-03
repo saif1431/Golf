@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 
-const PricingCard = () => {
+const   PricingCard = () => {
   const plans = [
     {
       id: 'core',
@@ -175,10 +175,7 @@ bgColor: '#F4BB33',
 
       <section className='flex items-center gap-8 flex-col justify-center mt-12'>
             <h2 className='text-6xl text-center leading-tight font-bold text-gray-800'>SWING INTO ACTION WITH THE M-SYSTEM</h2>
-            <p className=' text-center leading-tight'>Join Malaska Golf and become a part of a worldwide movement to simplify your swing to improve your game. Learn the M-System, Mike Malaska’s World Class swing process that will catapult your game and help you with your putting, chipping, pitching, your full swing and most importantly your driver.</p>
-            <p className=' text-center leading-tight'>The M-System will elevate your golf game, whether you’re a beginner, junior player eyeing college, a pro honing skills,or a weekend enthusiast. Gain a clear, repetitive swing for daily consistency. Master control and enjoy the game. Experience a dramatic improvement in your golf skills. It’s not just a promise ­– it’s a guarantee.
-
-</p>
+            <p className=' text-center leading-tight'>At Defy Elite Athletics, we give athletes everything they need to perform at their highest level — from in-depth swing analysis and personalized programming to one-on-one coaching, both online and in person. Our platform delivers comprehensive resources, including online tracking hub for nutrition tracking, body metrics, workout and golf practice routine builders, and an extensive library of drills, exercises, and corrective strategies for every swing fault. Backed by cutting-edge sport specific research and instructional content, we equip you with the tools, coaching, and knowledge to train smarter, play stronger, and defy your limits on and off the course.</p>
 <button className='btn-primary text-white py-2 px-6 rounded-md'>SIGN UP NOW</button>
       </section>
     </div>

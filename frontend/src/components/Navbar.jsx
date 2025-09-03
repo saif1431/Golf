@@ -87,27 +87,27 @@ export default function Navbar() {
                 href="#"
                 className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
               >
-                21 DAYS
+                News
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white  font-medium relative group transition-colors duration-200"
               >
-                M-SYSTEM
+                Coaching
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white  font-medium relative group transition-colors duration-200 border-b-2 border-black"
               >
-                SPORTS CONNECT
+                About
               </a>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white  font-medium relative group transition-colors duration-200"
               >
-                PLAY THE GAME
+                Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
               </a>
               <div className="relative group">
@@ -115,7 +115,7 @@ export default function Navbar() {
                   href="#"
                   className="text-gray-300 hover:text-white  font-medium flex items-center space-x-1 transition-colors duration-200"
                 >
-                  <span>COACHING</span>
+                  <span>Pro Shop</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -126,7 +126,7 @@ export default function Navbar() {
                 href="#"
                 className="text-gray-300 hover:text-white  font-medium relative group transition-colors duration-200"
               >
-                ABOUT
+Member
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
               </a>
               <a

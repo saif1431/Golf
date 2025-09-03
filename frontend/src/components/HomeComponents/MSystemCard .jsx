@@ -2,10 +2,10 @@ import React from 'react';
 
 
 const MSystemCard = ({ 
-  title = "LEARN THE M-SYSTEM",
+  title = "Defy Elite Performance System",
   subtitle = "Your golf swing roadmap to consistency. Just like the Tour Players.",
-  description = "This is a skill development process, an easy-to understand video swing series from M1 to M5 that provides the proven, fundamental building blocks to simplify your",
-  systemDescription = "The M-System is a swing process tailored for golfers at all levels. You will find the consistency and confidence you've been seeking. While you may not be on Tour, you'll certainly feel like it.",
+  description = "The Defy Elite Performance System is a structured, linear progression mode designed to maximize athletic deployment across every dimension — physical, technical, dietary, and mental. Built on evidence-based principles, this system provides athletes with a clear pathway for growth, moving step by step through targeted phases of training and refinement.",
+  systemDescription = "Athletes gain access to every tool necessary to track progress, including detailed performance assessments, swing analysis, nutrition tracking, and sport-specific metrics. Combined with comprehensive coaching and corrective strategies, the Defy Elite Performance System ensures measurable improvement, steady progression, and the resilience needed to go beyond your limits.",
   testimonial = "This is the best online golf swing process, period!",
   newDescription = "",
   ctaText = "LEARN MORE",
