@@ -19,20 +19,12 @@ const MSystemCard = ({
         <div className="md:flex-shrink-0 md:w-1/2">
           {videoUrl ? (
             <div className="relative pb-[56.25%] h-full ">
-              <iframe 
-                className="absolute object-cover top-0 left-0 w-[100%] h-full"
-                src={videoUrl}
-                title="M-System video"
-                frameBorder="0"
-                muted
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <video src={videoUrl} controls className="absolute top-0 left-0 w-full h-full"></video>
             </div>
           ) : (
           <div></div>
           )}
-        </div>
+        </div>  
         
         {/* Content Section  */}
         <div className="px-8 space-y-10 py-8 bg-black text-white md:w-1/2">
