@@ -64,8 +64,8 @@ const GolfSlider = () => {
                 {/* Overlay for better text visibility */}
                 <div className="absolute inset-0  bg-opacity-40"></div>
                 {/* Text content on the left, vertically centered */}
-                <div className={`relative z-10 pl-10 max-w-[60%] ${slide.textColor}`}>
-                  <h2 className="text-2xl archivo-black-regular md:text-6xl lg:w-[65%] w-[90%]  font-bold mb-2 text-start">{slide.title}</h2>
+                <div className={`relative z-10 lg:pl-10 pl-6 lg:max-w-[60%] ${slide.textColor}`}>
+                  <h2 className="text-4xl archivo-black-regular md:text-6xl lg:w-[65%] w-[90%]  font-bold mb-2 text-start">{slide.title}</h2>
                 </div>
               </div>
             </SwiperSlide>

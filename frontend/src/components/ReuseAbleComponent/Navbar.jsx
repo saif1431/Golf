@@ -1,4 +1,8 @@
+import React, { useState } from "react";
+
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="w-full bg-white">
       {/* Top Bar */}
@@ -70,7 +74,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className=" w-20 flex-shrink-0">
+            <div className="w-20 flex-shrink-0">
               <img src="/logo.png" alt="" />
             </div>
 
@@ -146,13 +150,17 @@ Member
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v4a2 2 0 01-2 2H9a2 2 0 01-2-2v-4m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v4a2 2 0 01-2 2H9a2 2 0 01-2-2v-4m8 0V9a2 2 0 00-2-2H9a2 2 00-2 2v4.01"
                   />
                 </svg>
               </button>
 
               {/* Mobile menu button */}
-              <button className="md:hidden text-gray-600 hover:text-black transition-colors duration-200">
+              <button
+                className="md:hidden text-gray-600 hover:text-black transition-colors duration-200"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Open Menu"
+              >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -160,7 +168,21 @@ Member
             </div>
           </div>
         </div>
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black px-4 pb-4">
+            <div className="flex flex-col space-y-4 mt-2">
+              <a href="#" className="text-white font-medium">Join</a>
+              <a href="#" className="text-white font-medium">News</a>
+              <a href="#" className="text-white font-medium">Coaching</a>
+              <a href="#" className="text-white font-medium">About</a>
+              <a href="#" className="text-white font-medium">Contact</a>
+              <a href="#" className="text-white font-medium">Member</a>
+              <a href="#" className="text-white font-medium">Pro Shop</a>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
-  )
+  );
 }

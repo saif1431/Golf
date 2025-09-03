@@ -9,6 +9,10 @@ import DiscoverImage from '../components/HomeComponents/DiscoverImage'
 import TestimonialSlider from '../components/HomeComponents/TestimonialSlider1'
 import MemberTestimonial from '../components/HomeComponents/MemberTestimonial'
 import Footer from '../components/ReuseAbleComponent/Footer'
+import JoinNowSection from '../components/HomeComponents/JoinNowSection'
+import PopularCoaches from '../components/HomeComponents/PopularCoaches'
+import TestimonialSlider2 from '../components/HomeComponents/TestimonialSlider2'
+import OurPartners from '../components/HomeComponents/OurPartners'
 
 function HomePage() {
   return (
@@ -43,7 +47,18 @@ function HomePage() {
       systemDescription='Discover your golf path, and put a plan together to get the most out of who you are as a player. Learn how to manage your own game and all the variables the golf gods offer.'
       newDescription = 'You will see remarkable results in a short period, as Mike shares his knowledge of the golf course.'
       videoUrl='https://v1.pinimg.com/videos/mc/720p/0d/c2/b7/0dc2b7f4d55e6bf4d4dc918ce4284d1a.mp4'/>
-
+<JoinNowSection/>
+<PopularCoaches/>
+ <MSystemCard 
+      title='PLAY THE GAME'
+      subtitle='Golf is an artistic expression of yourself through the game.'
+      description='Golf is a game of emotions and adjustments. It’s learning how to read yourself, both physically and mentally, to pick the best shot to hit and get the most out of it.'
+      systemDescription='Discover your golf path, and put a plan together to get the most out of who you are as a player. Learn how to manage your own game and all the variables the golf gods offer.'
+      newDescription = 'You will see remarkable results in a short period, as Mike shares his knowledge of the golf course.'
+      videoUrl='https://v1.pinimg.com/videos/mc/720p/0d/c2/b7/0dc2b7f4d55e6bf4d4dc918ce4284d1a.mp4'/>
+      <TestimonialSlider2/>
+        <MSystemCard videoUrl="https://v1.pinimg.com/videos/mc/expMp4/ef/2f/c8/ef2fc88ebec84b3d81565dda95a4eaae_t1.mp4" />
+        <OurPartners/>
       <Footer/>
     </div>
   )

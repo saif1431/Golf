@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
 
           {/* Payment methods */}
-          <div className="flex justify-center items-center space-x-4 mb-8 flex-wrap">
+          <div className="flex gap-3 lg:gap-0 justify-center items-center space-x-4 mb-8 flex-wrap">
             <div className="bg-white rounded px-2 py-1">
               <span className="text-black font-bold text-sm">amazon</span>
             </div>

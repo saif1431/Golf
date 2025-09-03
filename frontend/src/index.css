@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -8,6 +9,8 @@ body{
   padding: 0;
   box-sizing: border-box;
   background-color: #F4F4F4;
+   font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
 }
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
