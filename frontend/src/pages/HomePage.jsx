@@ -13,6 +13,8 @@ import JoinNowSection from '../components/HomeComponents/JoinNowSection'
 import PopularCoaches from '../components/HomeComponents/PopularCoaches'
 import TestimonialSlider2 from '../components/HomeComponents/TestimonialSlider2'
 import OurPartners from '../components/HomeComponents/OurPartners'
+import CurvedLoop from '../components/ReuseAbleComponent/CurvedLoop'
+import OurService from '../components/HomeComponents/OurService'
 
 function HomePage() {
   return (
@@ -20,6 +22,7 @@ function HomePage() {
       <HeroSection/>
       <GolfBanner/>
       <PricingCard/>
+      <OurService/>
       <GolfSlider/>
       <AchievementLogo/>
       <MSystemCard videoUrl="https://v1.pinimg.com/videos/mc/expMp4/ef/2f/c8/ef2fc88ebec84b3d81565dda95a4eaae_t1.mp4" />
@@ -59,7 +62,8 @@ function HomePage() {
       <TestimonialSlider2/>
         <MSystemCard videoUrl="https://v1.pinimg.com/videos/mc/expMp4/ef/2f/c8/ef2fc88ebec84b3d81565dda95a4eaae_t1.mp4" />
         <OurPartners/>
-      <Footer/>
+
+
     </div>
   )
 }
