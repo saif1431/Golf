@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import newsData from './newsData.js'
+import RelatedNews from './RelatedNews.jsx';
 
 function NewsDetail() {
   const { id } = useParams();
@@ -45,11 +46,15 @@ function NewsDetail() {
 </div>
           </div>
         )}
-
-        <Link to="/news" className="text-blue-600 hover:underline">
+<div className='flex items-center justify-center'> 
+  
+        <Link to="/news" className="btn-primary ">
           ← Back to News
         </Link>
+</div>
       </div>
+
+      <RelatedNews/>
     </div>
   )
 }

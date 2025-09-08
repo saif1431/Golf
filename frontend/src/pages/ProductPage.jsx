@@ -1,0 +1,22 @@
+import React from 'react'
+import FilterProduct from '../components/ProShopComponent/FilterProduct'
+import ProductCard from '../components/ProShopComponent/ProductCard'
+import { Link } from 'react-router-dom'
+import ProductVideo from '../components/ProShopComponent/ProductVideo'
+
+function ProductPage() {
+  return (
+    <div className=''>
+      <ProductVideo/>
+      <div className='py-12 mt-12 px-4 md:px-20'>
+
+      <FilterProduct/>
+      <Link to="/product_detail">
+        <ProductCard/>
+      </Link>
+      </div>
+    </div>
+  )
+}
+
+export default ProductPage

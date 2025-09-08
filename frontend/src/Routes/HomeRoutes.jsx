@@ -6,6 +6,9 @@ import JoinMovementPage from '../pages/JoinMovementPage'
 import AboutUsPage from '../pages/AboutUsPage'
 import NewsPage from '../pages/NewsPage'
 import NewsDetail from '../components/NewsComponents/NewsDetail'
+import ProductDetail from '../components/ProShopComponent/ProductDetails/ProductDetail'
+import ProductPage from '../pages/ProductPage'
+import Cart from '../components/ProShopComponent/ProductDetails/Cart'
 
 function HomeRoutes() {
   return (
@@ -16,7 +19,10 @@ function HomeRoutes() {
       <Route path='/about-us' element={<AboutUsPage/>} />
       <Route path='/news' element={<NewsPage />} />
        <Route path="/news/:id" element={<NewsDetail />} />
-      {/* Add more routes here if needed */}
+       <Route path="/all-product" element={<ProductPage />} />
+       <Route path="/product_detail" element={<ProductDetail />} />
+       <Route path="/cart" element={<Cart />} />
+
     </Routes>
   )
 }

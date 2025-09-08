@@ -65,7 +65,7 @@ export default function Navbar() {
 
         {/* Main Navigation */}
         <div className="bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className=" px-4 md:px-20">
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <Link to="/" className="w-20 flex-shrink-0">
@@ -139,13 +139,10 @@ export default function Navbar() {
                   Member
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
-                >
+              <Link to='/all-product' className="text-white font-medium">
                   Pro Shop
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </a>
+                </Link>
               </div>
 
               {/* Right Icons */}
@@ -153,12 +150,17 @@ export default function Navbar() {
                 <button className="text-gray-300 hover:text-gray-500 transition-colors duration-200">
                   <Search className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={() => setCartOpen(true)}
+            <div 
+             onClick={() => setCartOpen(true)}
+            className=" relative">
+                  <button
+                 
                   className="text-gray-300 hover:text-gray-500 transition-colors duration-200"
                 >
                   <ShoppingCart className="w-5 h-5" />
                 </button>
+                <span className="text-gray-300 top-3 left-3 text-center  absolute text-xs bg-[#C51518] w-4 h-4 rounded-full flex items-center justify-center">3</span>
+            </div>
 
                 {/* Mobile menu button */}
                 <button
@@ -194,9 +196,9 @@ export default function Navbar() {
                 <a href="#" className="text-white font-medium">
                   Member
                 </a>
-                <a href="#" className="text-white font-medium">
+                <Link to='/all-product' className="text-white font-medium">
                   Pro Shop
-                </a>
+                </Link>
               </div>
             </div>
           )}
