@@ -9,6 +9,7 @@ import NewsDetail from '../components/NewsComponents/NewsDetail'
 import ProductDetail from '../components/ProShopComponent/ProductDetails/ProductDetail'
 import ProductPage from '../pages/ProductPage'
 import Cart from '../components/ProShopComponent/ProductDetails/Cart'
+import CoachDetail from '../components/CoachesComponent/CoachDetail'
 
 function HomeRoutes() {
   return (
@@ -22,6 +23,7 @@ function HomeRoutes() {
        <Route path="/all-product" element={<ProductPage />} />
        <Route path="/product_detail" element={<ProductDetail />} />
        <Route path="/cart" element={<Cart />} />
+       <Route path="/coach-detail" element={<CoachDetail />} />
 
     </Routes>
   )

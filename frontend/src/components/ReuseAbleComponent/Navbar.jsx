@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         {/* Main Navigation */}
-        <div className="bg-black">
+        <div className="bg-black relative">
           <div className=" px-4 md:px-20">
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
@@ -88,31 +88,31 @@ export default function Navbar() {
                 </Link>
                 <Link
                   to="#"
-                  className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200 flex items-center"
+                  className="text-gray-300 hover:text-white font-medium  group transition-colors duration-200 flex items-center"
                   onMouseEnter={() => setCoachingDropdownOpen(true)}
                   onMouseLeave={() => setCoachingDropdownOpen(false)}
                 >
                   Coaching
                   <ChevronDown className="w-4 h-4 ml-1" />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-75 delay-300"></span>
                   {/* Dropdown */}
                   {coachingDropdownOpen && (
                     <div
-                      className="absolute left-0 top-full mt-2 bg-white shadow-lg rounded-lg py-8 px-8 min-w-[500px] flex gap-18 z-50"
+                      className="absolute left-0 top-18 mt-2 bg-white shadow-lg  py-8 px-8 delay-300 min-w-full flex gap-18 z-50"
                       onMouseEnter={() => setCoachingDropdownOpen(true)}
                       onMouseLeave={() => setCoachingDropdownOpen(false)}
                     >
                       <div className="px-4  space-y-4">
                         <h5 className="text-black">USA</h5>
-                        <div className="text-gray-500 space-y-2">
-                          <Link href="#">MIKE MALASKA -AZ</Link>
-                          <Link href="#">MIKE MALASKA -AZ</Link>
+                        <div className="text-gray-500 flex flex-col space-y-2 text-sm">
+                          <Link to="/coach-detail">MIKE MALASKA -AZ</Link>
+                          <Link to="/coach-detail">MIKE MALASKA -AZ</Link>
                         </div>
                       </div>
                       <div className="text-black space-y-4">
                         <h5 className="text-black">INTERNATIONAL</h5>
-                        <div className="space-y-2 text-gray-500">
-                          <Link href="#">MATT BAKER -UK</Link>
+                        <div className="space-y-2 text-sm text-gray-500">
+                          <Link to="/coach-detail">MATT BAKER -UK</Link>
                         </div>
                       </div>
                     </div>

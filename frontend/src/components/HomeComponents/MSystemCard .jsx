@@ -19,7 +19,12 @@ const MSystemCard = ({
         <div className="md:flex-shrink-0 md:w-1/2">
           {videoUrl ? (
             <div className="relative  pb-[56.25%] h-full ">
-              <video src={videoUrl} controls className="absolute top-0 left-0 w-full h-full"></video>
+              <video src={videoUrl} 
+               autoPlay
+        muted
+        loop
+        playsInline
+              controls className="absolute top-0 left-0 w-full object-cover h-full"></video>
             </div>
           ) : (
           <div></div>
