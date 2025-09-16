@@ -15,12 +15,14 @@ import TestimonialSlider2 from '../components/HomeComponents/TestimonialSlider2'
 import OurPartners from '../components/HomeComponents/OurPartners'
 import CurvedLoop from '../components/ReuseAbleComponent/CurvedLoop'
 import OurService from '../components/HomeComponents/OurService'
+import FeatureCarousel from '../components/HomeComponents/FeatureCarousel'
 
 function HomePage() {
   return (
     <div>
       <HeroSection/>
-      <GolfBanner/>
+      {/* <GolfBanner/> */}
+      <FeatureCarousel/>
       <PricingCard/>
       <OurService/>
       <GolfSlider/>
@@ -28,40 +30,39 @@ function HomePage() {
       <MSystemCard videoUrl="./Golf2.mp4" />
       <DiscoverImage/>
       <MSystemCard
-      title='JOIN MALASKA GOLF'
-      subtitle='Learn from one of the World’s Best Player Coach with over 50+ years’ experience.'
-      description='Leverage Mike Malaskas vast golf expertise and unparalleled insights into the swing gained from tutoring under Joe Nichols and collaborating with legends like Jim Flick and Jack Nicklaus. With 400,000+ lessons and experience in PGA Tour Events'
-      systemDescription='Malaska Golf provides the clearest path to simplify your swing and unlock your potential. Access the worlds best, easy-to-understand swing content, online lessons, and golf programs.'
+      title='Join NOW! Train Smarter. Play Stronger'
+      subtitle='Defy Elite Athletics delivers research-driven coaching, certified expertise, and proven performance strategies for every athlete.'
+      description='Leverage Defy Elite Athletics’ research-based coaching and performance-driven approach, built on certifications in golf development, athletic performance, and sport-specific training. Our programs integrate swing analysis, biomechanics, fitness and mobilization, and golf drills and assessments designed to give athletes a complete and comprehensive path toward improvement.'
+      systemDescription='Built on proven principles of performance and golf development, we create a clear roadmap that empowers athletes to train smarter, play stronger, and consistently defy their limits.'
+      systemDescription2='Defy Elite Athletics delivers the most comprehensive, science-backed golf performance system available — combining online swing analysis, personalized programming, and full training integration.'
+      newDescription='Not just another golf lesson. A science-based, athlete-first system for smarter training and stronger play.'
+      testimonial='This is the Defy Performance System'
       videoUrl='/Golf1.mp4'/>
 
       <TestimonialSlider/>
       <MSystemCard 
-      title='ALL SPORTS CONNECT'
-      subtitle='Unleash your golf swing potential through athletic connections.'
-      description='Mike Malaska has harnessed extensive physiological knowledge through collaboration with anatomical physiologist Pete Egoscue and engagement in diverse sports. Their work with professional athletes across various disciplines allowed Mike to recognize the synergy that connects all sports.'
-      systemDescription='Whether you’ve played baseball, tennis, basketball, hockey, bowling, ping pong, or almost any sport, you can leverage the skills acquired.'
+      title='ALL SPORTS. ONE SWING.'
+      subtitle='Unlock your golf potential through athletic performance.'
+      description='At Defy Elite Athletics, we believe the golf swing is built on the same athletic foundations that power every sport. By applying research-backed training methods and movement strategies drawn from multiple disciplines, we help athletes connect strength, mobility, and coordination to their golf performance'
+      systemDescription='Whether your background is in baseball, basketball, tennis, hockey, or any other sport, the skills you’ve developed can be harnessed to create a more powerful, consistent, and efficient swing.'
+      testimonial='Not just golf lessons a full-spectrum training approach that builds strength, mobility, and skill to help you reach your peak regardless of your sport.'
       videoUrl='./Golf3.mp4'/>
-
-      <MemberTestimonial/>
       <MSystemCard 
-      title='PLAY THE GAME'
-      subtitle='Golf is an artistic expression of yourself through the game.'
-      description='Golf is a game of emotions and adjustments. It’s learning how to read yourself, both physically and mentally, to pick the best shot to hit and get the most out of it.'
-      systemDescription='Discover your golf path, and put a plan together to get the most out of who you are as a player. Learn how to manage your own game and all the variables the golf gods offer.'
-      newDescription = 'You will see remarkable results in a short period, as Mike shares his knowledge of the golf course.'
+      title='THE MENTAL GAME'
+      subtitle='Golf is a test of focus, patience, and emotional control.'
+      description='Every round is about adjusting — not just your swing, but your mindset. By strengthening your ability to concentrate, reset after mistakes, and visualize success, you create the foundation for peak performance.'
+      systemDescription='At Defy Elite Athletics, we integrate mental training strategies with performance coaching to help you stay sharp under pressure and bring consistency to every shot.'
+      newDescription = 'Train your mind. Unlock your best golf.'
       videoUrl='/Golf1.mp4'/>
-<JoinNowSection/>
 <PopularCoaches/>
- <MSystemCard 
-      title='PLAY THE GAME'
-      subtitle='Golf is an artistic expression of yourself through the game.'
-      description='Golf is a game of emotions and adjustments. It’s learning how to read yourself, both physically and mentally, to pick the best shot to hit and get the most out of it.'
-      systemDescription='Discover your golf path, and put a plan together to get the most out of who you are as a player. Learn how to manage your own game and all the variables the golf gods offer.'
-      newDescription = 'You will see remarkable results in a short period, as Mike shares his knowledge of the golf course.'
+            <MSystemCard 
+      title='Defy Elite Performance System'
+      subtitle='Train smarter. Play stronger. Defy your limits'
+      description='Golf performance is more than a swing — it’s the integration of body, mind, and preparation. The Defy Elite Performance System provides athletes with a complete framework for development, combining physical training, technical refinement, nutrition guidance, and mental resilience into one powerful progression.'
+      systemDescription='With built-in progress tracking, personalized coaching, and corrective exercises, this system helps athletes build consistency and confidence that last. Whether your goal is to compete at a high level or simply play your best golf, the Defy Elite Performance System gives you the roadmap to get there.'
+
       videoUrl='/Golf1.mp4'/>
-      <TestimonialSlider2/>
-        <MSystemCard videoUrl="./Golf2.mp4" />
-        <OurPartners/>
+     
 
 
     </div>

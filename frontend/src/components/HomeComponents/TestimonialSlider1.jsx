@@ -1,78 +1,74 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectCreative } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-creative';
+import { Quote } from "lucide-react";
 
-const       TestimonialSlider1 = () => {
+const TestimonialSlider1 = () => {
   const testimonials = [
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "With Steven you get polite communication, exceptional understanding of golf biomechanics and even a weekly planner of how to fine tune your swing. I'm actually a little surprised at the quality of service for the price! All major issues are identified and a detailed description of how to improve each issue is provided. If you're anyone who is on the fence about doing this, rest assured the service is quality.",
+      author: "Tom Golf",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "The attention to detail Steven gives your swing and the resources he gives are unparalleled. Not only am I happy with the purchase, I’ll be buying another session in the next month or two after working on the drills he gave me. Can’t recommend more highly.",
+      author: "Tony_ace3",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "Steven provided crisp feedback around items in my golf swing that I have struggled with for years. His explanation was very easy to understand and he provided actionable drills for me to implement so I can address swing faults. It is evident Steven possesses a deep understanding of how the body moves throughout the swing.",
+      author: "akg312",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "Great analysis, thorough and critical with a lot of demonstration and pointers received. Honestly can’t find a better for value in terms of golf lessons/analysis anywhere else",
+      author: "Johnpaul1235",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "Deep in depth analysis and excellent drill suggestions for improving weak points in the swing",
+      author: "- Dylan_fogarty",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "This was fantastic! He really knows his stuff and gave great information. Highly recommend",
+      author: "- tonynguyen321",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "Mike is more than a teacher of the swing; Mike is a student of it himself, having studied it for many decades. He continually evaluates new theories, ideas, and methods and uses his knowledge of the body to match the right approach to the right person. Mike isn't just a fine teacher; he's also an excellent player.",
-      author: "Mark King",
+      text: "Steven provided a comprehensive swing analysis, and drills to help work on the changes needed. Really pleased with the outcome, highly recommend",
+      author: "Bobsarjo",
       title: "Former President and CEO TaylorMade Adidas"
     },
     {
-      text: "I've had the very good fortune of working with Mike Malaska for nearly 30 years in my former roles overseeing instruction at Golf Magazine and the Golf Channel. Without any doubt, he has been a pioneer in merging fitness and swing instruction.",
-      author: "Lorin Anderson",
+      text: "If you want to improve your golf swing, you need to get in touch with this guy! Great guy with a deep understanding when it comes to biomechanics in a golf swing.",
+      author: "Kev981",
       title: "Former Editor-Golf Magazine. Founder of Proponent Group"
     },
     {
-      text: "Mike has spent his entire life in golf as a player, teacher, a coach, an innovator and, quite frankly, a giant in the field of golf instruction. His technical knowledge is only exceeded by his desire to guide people on their golf journeys. He's simply that good.",
-      author: "Peter Morrice",
+      text: "Went above and beyond, thats all i have to say, great info, explanation, drills in depth analysis.",
+      author: "darkouzelac",
       title: "Senior Editor-Golf Digest"
-    }
+    },
+    {
+      text: "extremely happy with my delivery. great in depth analysis that I am excited to learn from and put into practice. breaking down the different points in my swing was very helpful.",
+      author: "- Jxlcreation",
+      title: "Senior Editor-Golf Digest"
+    },
+
   ];
 
   return (
-    <div className="w-full bg-white mt-12 px-4 py-12">
+    <div className="w-full bg-gradient-to-br from-blue-50 to-green-50 mt-12 px-4 py-12">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          1024: { slidesPerView: 2, spaceBetween: 30 },
         }}
         loop={true}
         centeredSlides={true}
@@ -92,59 +88,52 @@ const       TestimonialSlider1 = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             {({ isActive }) => (
-              <div className={`rounded-xl p-6 md:p-8 transition-all duration-500 h-full 
-                ${isActive 
-                  ? 'bg-white shadow-xl transform -translate-y-4 scale-105' 
-                  : 'bg-gray-100 shadow-lg'}`}
-              >
-           <div className='flex gap-1'>
-              <svg
-        className="w-62 h-fit text-gray-800 mb-2 -ml-2"
-        fill="currentColor"
-        viewBox="0 0 32 32"
-      >
-        <path d="M12.5 6C7.253 6 3 10.253 3 15.5c0 4.142 3.358 7.5 7.5 7.5 2.485 0 4.5-2.015 4.5-4.5 0-2.485-2.015-4.5-4.5-4.5-.828 0-1.5-.672-1.5-1.5S9.672 11 10.5 11c2.485 0 4.5-2.015 4.5-4.5S12.5 6 12.5 6zm13 0C20.253 6 16 10.253 16 15.5c0 4.142 3.358 7.5 7.5 7.5 2.485 0 4.5-2.015 4.5-4.5 0-2.485-2.015-4.5-4.5-4.5-.828 0-1.5-.672-1.5-1.5S22.672 11 23.5 11c2.485 0 4.5-2.015 4.5-4.5S25.5 6 25.5 6z"/>
-      </svg>
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 italic">
+              <div className={`relative bg-white rounded-2xl border-l-8 border-blue-400 shadow-lg p-8 flex flex-col h-full transition-all duration-500
+                ${isActive ? 'scale-105 shadow-2xl' : 'opacity-80'}`}>
+                {/* Quote icon */}
+                <Quote className="w-10 h-10 text-blue-300 absolute -top-5 -left-5 bg-white rounded-full p-2 shadow" />
+                {/* Testimonial text */}
+                <p className="text-gray-700 text-lg leading-relaxed mb-8 italic mt-4">
                   {testimonial.text}
                 </p>
-           </div>
-                <div className="border-t text-center border-gray-200 pt-4">
-                  <p className="text-gray-900 font-bold text-lg">{testimonial.author}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.title}</p>
+                {/* Author section */}
+                <div className="flex items-center mt-auto pt-4 border-t border-gray-100">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl mr-4 shadow">
+                    {testimonial.author[0]}
+                  </div>
+                  <div>
+                    <p className="text-gray-900 font-bold">{testimonial.author}</p>
+                    
+                  </div>
                 </div>
               </div>
             )}
           </SwiperSlide>
         ))}
-        
         {/* Custom pagination container */}
-        <div className="testimonial-pagination mt-8 flex justify-center space-x-2"></div>
+        <div className="testimonial-pagination mt-8 flex justify-center space-x-4"></div>
       </Swiper>
 
       <style jsx global>{`
         .testimonial-swiper {
           padding-bottom: 40px;
         }
-        
         .testimonial-bullet {
           display: inline-block;
-          width: 8px;
-          height: 8px;
-          background-color: #cbd5e1;
+          width: 14px;
+          height: 14px;
+          background-color: #a5b4fc;
           border-radius: 50%;
-          margin: 0 5px;
+          margin: 0 8px;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.3s;
         }
-        
         .testimonial-bullet-active {
-          background-color: black;
-          transform: scale(1.2);
+          background-color: #2563eb;
+          transform: scale(1.25);
         }
-        
         .swiper-slide {
-          transition: all 0.5s ease;
+          transition: all 0.5s;
           height: auto;
         }
       `}</style>

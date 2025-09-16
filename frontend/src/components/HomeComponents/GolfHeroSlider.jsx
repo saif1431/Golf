@@ -13,14 +13,14 @@ const GolfSlider = () => {
     {
       id: 1,
       image: 'https://malaskagolf.com/cdn/shop/files/Mike-Credentials-Banner-A-min.png?v=1694444043&width=1920',
-      title: "2011 PGA NATIONAL TEACHER OF THE YEAR",
+      title: "Credentials You Can Trust",
 
       textColor: "text-white"
     },
     {
       id: 2,
       image: 'https://malaskagolf.com/cdn/shop/files/Mike-Credentials-Banner-B-min.png?v=1694444052&width=1920',
-      title: "GOLF DIGEST LEGEND OF GOLF INSTRUCTION",
+      title: "Coaching That Delivers Results.",
       textColor: "text-white"
     }
   ];
@@ -65,7 +65,7 @@ const GolfSlider = () => {
                 <div className="absolute inset-0  bg-opacity-40"></div>
                 {/* Text content on the left, vertically centered */}
                 <div className={`relative z-10 lg:pl-10 pl-6 lg:max-w-[60%] ${slide.textColor}`}>
-                  <h2 className="text-4xl archivo-black-regular md:text-6xl lg:w-[65%] w-[90%]  font-bold mb-2 text-start">{slide.title}</h2>
+                  <h2 className="text-4xl archivo-black-regular md:text-6xl lg:w-[60%] w-[90%] uppercase font-bold mb-2 text-start">{slide.title}</h2>
                 </div>
               </div>
             </SwiperSlide>

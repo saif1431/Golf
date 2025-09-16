@@ -4,46 +4,46 @@ import { Check } from 'lucide-react';
 const   PricingCard = () => {
   const plans = [
     {
-      id: 'core',
+      id: 'Grind',
       image:'https://malaskagolf.com/cdn/shop/files/Core-Logo-min.png?v=1743809882&width=832',
-      name: 'CORE',
-      description: 'Master the basics and start owning your swing. CORE gives you a clear, simple introduction to the M-System(Lite). Perfect for building confidence and momentum.',
+      name: 'Grind',
+      description: 'Designed for self-starters and recreational athletes who want structured progress without premium coaching.',
       yearlyPrice: 99,
       yearlyOriginal: 119,
       yearlySavings: 20,
       monthlyPrice: 9.99,
       videoCount: '750+',
       features: [
-        'M-System (Lite)',
-        'Ask Malaska Golf Q&A',
-        'Drill Center',
-        'I Feel Your Pain',
-        'Player Lessons',
-        'Fitness and Health',
-        'Golf Talk'
+        'Categorized Drill Library (faults, mobilizations, correctives, shot types)',
+        'Basic Custom Program Builder (4–6 weeks)',
+        'Forum & Community Challenges (basic level)',
+        'Records Tracking (PRs, achievements)',
+        'Supplement Library (read-only)',
+        'Routine Builder (basic, no reminders)',
+        'Gear Shop + Direct EPUB Sales'
       ],
       bgColor: '#7FB7FD',
       borderColor: '#235E92',
       textColor: 'text-blue-900'
     },
     {
-      id: 'plus',
+      id: 'Rise',
       image:'https://malaskagolf.com/cdn/shop/files/Plus-Logo-min.png?v=1743809883&width=832',
-      name: 'PLUS',
-      description: 'Maximize your improvement with deeper M-System access, weekly content, and targeted skill development. PLUS is built for golfers ready to elevate their game.',
+      name: 'RISE',
+      description: 'Adds personalization, early coach feedback, and accountability — perfect for athletes progressing beyond fundamentals.',
       yearlyPrice: 299,
       yearlyOriginal: 359,
       yearlySavings: 60,
       monthlyPrice: 29.99,
       videoCount: '1250+',
       features: [
-        'Everything in CORE +',
-        'Full M-System access',
-        'Skill Pathways',
-        'Sports Connect',
-        'Invisible Swing',
-        'Tech Talk',
-        'Mulligan Mondays',
+        'Expanded Program Builder (up to 12 weeks, customizable)',
+        'Client Screening & AI-Assisted Plan (movement + draft programming',
+        'Scheduling & Lesson Booking (access to online coaching slots)',
+        'Video Analysis (limited: 1 complimentary swing analysis per quarter)',
+        'Nutrition Tracking (log food & hydration, coach-monitored)',
+        'Supplement Builder (full version with reminders)',
+        'Advanced Community Challenges (leaderboards, competitions)',
         'Quick Fix Fridays'
       ],
 bgColor: '#F4BB33',
@@ -53,25 +53,23 @@ bgColor: '#F4BB33',
       popular: true
     },
     {
-      id: 'elite',
+      id: 'Defy',
       image:'https://malaskagolf.com/cdn/shop/files/Elite-Logo-min.png?v=1743809883&width=832',
       name: 'ELITE',
-      description: 'Maintain your edge with full access to every lesson, advanced programs, and exclusive content. ELITE gives you everything you need to master your swing and own your game-now and for years to come.',
+      description: 'Break limits. Own your performance.',
       yearlyPrice: 349,
       yearlyOriginal: 499,
       yearlySavings: 150,
       monthlyPrice: 49.99,
       videoCount: '1,500+',
       features: [
-        'Everything in PLUS +',
-        'M-System MAX',
-        'M-System Coaching Series',
-        'Mental Game',
-        'Golf Challenge',
-        'Jack Nicklaus Interview**',
-        'Director of Distance with Justin James',
-        '21 Days to a Better Golf Swing**',
-        'Swing Check Analysis (Add On Purchase)'
+        'Everything in Rise PLUS +',
+        'Video Analysis (4 analyses per quarter, side-by-side comparisons)',
+        'Remote Lesson Access (2 complimentary 30-min lessons per year)',
+        'Swing Analysis Reviews (quarterly, 4 per year)',
+        'Priority Scheduling (preferred time slots for lessons)',
+        'Coach Reports (written reviews each season)',
+        'Early Access Features (TrackMan/Data integration once live)',
       ],
       bgColor: '#A0A5A8',
            borderColor: '#687681',
@@ -115,7 +113,7 @@ bgColor: '#F4BB33',
                     <span className="text-5xl font-black text-gray-800">
                       ${plan.yearlyPrice}
                     </span>
-                    <span className="text-xl text-gray-700 ml-1">/YR</span>
+                    <span className="text-xl text-gray-700 ml-1">/year</span>
                   </div>
                   <div className='flex items-center justify-center flex-col'>
                   <div className=" text-red-500  text-center text-3xl px-4 py-2 rounded-lg  mb-2">
@@ -130,7 +128,7 @@ bgColor: '#F4BB33',
       <button>Subscribe</button>
 </div>
                   <div className="text-3xl font-bold mt-4 text-gray-800">
-                    ${plan.monthlyPrice}<span className="text-lg">/mo</span>
+                    ${plan.monthlyPrice}<span className="text-lg">/month</span>
                   </div>
                   <div className={`mt-4  py-3 text-3xl font-bold  w-[90%] mx-auto text-center rounded-2xl ${plan.bgColor}`}>
       <button>Subscribe</button>

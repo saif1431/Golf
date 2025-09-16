@@ -6,8 +6,9 @@ const MSystemCard = ({
   subtitle = "Your golf swing roadmap to consistency. Just like the Tour Players.",
   description = "The Defy Elite Performance System is a structured, linear progression mode designed to maximize athletic deployment across every dimension — physical, technical, dietary, and mental. Built on evidence-based principles, this system provides athletes with a clear pathway for growth, moving step by step through targeted phases of training and refinement.",
   systemDescription = "Athletes gain access to every tool necessary to track progress, including detailed performance assessments, swing analysis, nutrition tracking, and sport-specific metrics. Combined with comprehensive coaching and corrective strategies, the Defy Elite Performance System ensures measurable improvement, steady progression, and the resilience needed to go beyond your limits.",
+  systemDescription2 = "Defy Elite Athletics delivers the most comprehensive, science-backed golf performance system available — combining online swing analysis, personalized programming, and full training integration.",
   testimonial = "This is the best online golf swing process, period!",
-  newDescription = "",
+  newDescription = "",  
   ctaText = "LEARN MORE",
   videoUrl = "", // You can pass a video URL here
   backgroundColor = "bg-white",
@@ -44,6 +45,9 @@ const MSystemCard = ({
           
           <div className="mt-4">
             <p>{systemDescription}</p>
+          </div>
+          <div className="mt-4">
+            <p>{systemDescription2}</p>
           </div>
           <div className="">
             <p>{newDescription}</p>

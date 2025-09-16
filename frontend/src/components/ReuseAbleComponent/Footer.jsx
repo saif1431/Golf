@@ -3,16 +3,16 @@ export default function Footer() {
     <footer className="bg-gray-900 mt-6 text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Contact Info */}
           <div className="space-y-4">
             <a href="mailto:info@malaskagolf.com" className="block text-white hover:text-gray-300 underline">
-              info@malaskagolf.com
+             defyeliteathletics@gmail.com
             </a>
             <div>
               <span className="text-gray-300">TEL: </span>
               <a href="tel:888.899.4397" className="text-white hover:text-gray-300 underline">
-                888.899.4397
+              (telephone number TBD)
               </a>
             </div>
           </div>
@@ -23,29 +23,44 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  JOIN MALASKA GOLF
+                  Contact Us
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  COACHING
+                  About Us
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  PRO SHOP
+                  Pro Shop
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  CONTACT US
+                Coaching Services
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white">
+                inside would have nutrition counseling
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white">
+               swing analysis
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white">
+              remote coaching
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Policies */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-bold text-lg tracking-wider mb-6">POLICIES</h3>
             <ul className="space-y-3">
               <li>
@@ -74,16 +89,13 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Newsletter Signup */}
           <div>
             <h3 className="text-white font-bold text-lg tracking-wider mb-6">
-              BE THE
-              <br />
-              FIRST TO
-              <br />
-              KNOW
+           My socials
+           
             </h3>
             <p className="text-gray-300 mb-6">Subscribe to find out about special offers and promotions.</p>
             <div className="flex mb-8">
