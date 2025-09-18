@@ -61,14 +61,14 @@ const TestimonialSlider1 = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-br from-blue-50 to-green-50 mt-12 px-4 py-12">
+    <div className="w-full bg-gradient-to-br from-blue-50 to-green-50 mt-12 lg:px-12 px-6 py-12">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={1} // Default: 1 slide on small screens
         breakpoints={{
-          640: { slidesPerView: 1, spaceBetween: 20 },
-          1024: { slidesPerView: 2, spaceBetween: 30 },
+          640: { slidesPerView: 1, spaceBetween: 20 },   // 1 slide for screens >= 640px
+          1024: { slidesPerView: 3, spaceBetween: 30 },  // 3 slides for screens >= 1024px
         }}
         loop={true}
         centeredSlides={true}
@@ -120,8 +120,8 @@ const TestimonialSlider1 = () => {
         }
         .testimonial-bullet {
           display: inline-block;
-          width: 14px;
-          height: 14px;
+          width: 10px;
+          height: 10px;
           background-color: #a5b4fc;
           border-radius: 50%;
           margin: 0 8px;

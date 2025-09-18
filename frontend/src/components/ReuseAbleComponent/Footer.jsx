@@ -173,42 +173,42 @@ export default function Footer() {
           </div>
 
           {/* Payment methods */}
-          <div className="flex gap-3 lg:gap-0 justify-center items-center space-x-4 mb-8 flex-wrap">
-            <div className="bg-white rounded px-2 py-1">
-              <span className="text-black font-bold text-sm">amazon</span>
+          <div className="flex gap-3 lg:gap-0  justify-center items-center  mb-8 flex-wrap">
+            <div className=" rounded px-2 py-1  flex items-center">
+              <img src="/images/download (1).svg" alt="Amazon Pay" className="h-8 w-auto" />
             </div>
-            <div className="bg-blue-600 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">AMERICAN EXPRESS</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download (2).svg" alt="American Express" className="h-8 w-auto" />
             </div>
-            <div className="bg-black rounded px-2 py-1">
-              <span className="text-white font-bold text-sm">Apple Pay</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download (3).svg" alt="Apple Pay" className="h-8 w-auto" />
             </div>
-            <div className="bg-blue-500 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">Diners Club</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download (4).svg" alt="Diners Club" className="h-8 w-auto" />
             </div>
-            <div className="bg-orange-500 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">DISCOVER</span>
+            <div className="rounded px-2 py-1 flex items-center">
+              <img src="/images/download (5).svg" alt="Discover" className="h-8 w-auto" />
             </div>
-            <div className="bg-white rounded px-2 py-1">
-              <span className="text-blue-600 font-bold text-sm">G Pay</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download (6).svg" alt="Google Pay" className="h-8 w-auto" />
             </div>
-            <div className="bg-red-600 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">Mastercard</span>
+            <div className="rounded px-2 py-1 flex items-center">
+              <img src="/images/download (7).svg" alt="Mastercard" className="h-8  w-auto" />
             </div>
-            <div className="bg-blue-600 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">PayPal</span>
+            <div className="rounded px-2 py-1 flex items-center">
+              <img src="/images/download (8).svg" alt="PayPal" className="h-8 w-auto" />
             </div>
-            <div className="bg-purple-600 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">Shop Pay</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download (9).svg" alt="Shop Pay" className="h-8 w-auto" />
             </div>
-            <div className="bg-blue-800 rounded px-2 py-1">
-              <span className="text-white font-bold text-xs">VISA</span>
+            <div className=" rounded px-2 py-1 flex items-center">
+              <img src="/images/download.svg" alt="Visa" className="h-8 w-auto" />
             </div>
           </div>
 
           {/* Copyright */}
           <div className="text-center text-gray-400">
-            <p>© 2025 Malaska Golf</p>
+            <p>© 2025 DeffyElite Athletics Golf</p>
           </div>
         </div>
       </div>
