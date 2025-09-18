@@ -1,21 +1,17 @@
 import React from 'react'
-import HeroSection from '../components/HomeComponents/HeroSection'
-import GolfBanner from '../components/HomeComponents/GolfBanner'
-import PricingCard from '../components/HomeComponents/PricingCard'
-import GolfSlider from '../components/HomeComponents/GolfHeroSlider'
-import AchievementLogo from '../components/HomeComponents/AchievementLogo'
-import MSystemCard from '../components/HomeComponents/MSystemCard '
-import DiscoverImage from '../components/HomeComponents/DiscoverImage'
-import TestimonialSlider from '../components/HomeComponents/TestimonialSlider1'
-import MemberTestimonial from '../components/HomeComponents/MemberTestimonial'
-import Footer from '../components/ReuseAbleComponent/Footer'
-import JoinNowSection from '../components/HomeComponents/JoinNowSection'
-import PopularCoaches from '../components/HomeComponents/PopularCoaches'
-import TestimonialSlider2 from '../components/HomeComponents/TestimonialSlider2'
-import OurPartners from '../components/HomeComponents/OurPartners'
-import CurvedLoop from '../components/ReuseAbleComponent/CurvedLoop'
-import OurService from '../components/HomeComponents/OurService'
-import FeatureCarousel from '../components/HomeComponents/FeatureCarousel'
+
+
+import FeatureCarousel from '../../components/HomePageComponents/HomeComponents/FeatureCarousel'
+import PricingCard from '../../components/HomePageComponents/HomeComponents/PricingCard'
+import AchievementLogo from '../../components/HomePageComponents/HomeComponents/AchievementLogo'
+import DiscoverImage from '../../components/HomePageComponents/HomeComponents/DiscoverImage'
+import HeroSection from '../../components/HomePageComponents/HomeComponents/HeroSection'
+import OurService from '../../components/HomePageComponents/HomeComponents/OurService'
+import GolfSlider from '../../components/HomePageComponents/HomeComponents/GolfHeroSlider'
+import MSystemCard from '../../components/HomePageComponents/HomeComponents/MSystemCard '
+import TestimonialSlider1 from '../../components/HomePageComponents/HomeComponents/TestimonialSlider1'
+import PopularCoaches from '../../components/HomePageComponents/HomeComponents/PopularCoaches'
+
 
 function HomePage() {
   return (
@@ -39,7 +35,7 @@ function HomePage() {
       testimonial='This is the Defy Performance System'
       videoUrl='/Golf1.mp4'/>
 
-      <TestimonialSlider/>
+      <TestimonialSlider1/>
       <MSystemCard 
       title='ALL SPORTS. ONE SWING.'
       subtitle='Unlock your golf potential through athletic performance.'

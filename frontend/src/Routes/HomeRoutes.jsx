@@ -1,20 +1,23 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import HomePage from '../pages/HomePage'
-import Navbar from '../components/ReuseAbleComponent/Navbar'
-import JoinMovementPage from '../pages/JoinMovementPage'
-import AboutUsPage from '../pages/AboutUsPage'
-import NewsPage from '../pages/NewsPage'
-import NewsDetail from '../components/NewsComponents/NewsDetail'
+import HomePage from '../pages/HomePages/HomePage'
+import JoinMovementPage from '../pages/HomePages/JoinMovementPage'
+import AboutUsPage from '../pages/HomePages/AboutUsPage'
+import NewsPage from '../pages/HomePages/NewsPage'
+import ProductPage from '../pages/HomePages/ProductPage'
+import CartDrawer from '../components/ReuseAbleComponent/CartDrawer'
+import NewsDetail from '../components/HomePageComponents/NewsComponents/NewsDetail'
 import ProductDetail from '../components/ProShopComponent/ProductDetails/ProductDetail'
-import ProductPage from '../pages/ProductPage'
-import Cart from '../components/ProShopComponent/ProductDetails/Cart'
-import CoachDetail from '../components/CoachesComponent/CoachDetail'
+import CoachDetail from '../components/HomePageComponents/CoachesComponent/CoachDetail'
+import Navbar from '../components/ReuseAbleComponent/Navbar'
+import Footer from '../components/ReuseAbleComponent/Footer'
+
 
 function HomeRoutes() {
   return (
+<div>
+  <Navbar/>
     <Routes>
-
       <Route path='/' element={<HomePage />} />
       <Route path='/join-our-movement' element={<JoinMovementPage />} />
       <Route path='/about-us' element={<AboutUsPage/>} />
@@ -22,10 +25,11 @@ function HomeRoutes() {
        <Route path="/news/:id" element={<NewsDetail />} />
        <Route path="/all-product" element={<ProductPage />} />
        <Route path="/product_detail" element={<ProductDetail />} />
-       <Route path="/cart" element={<Cart />} />
+       <Route path="/cart" element={<CartDrawer />} />
        <Route path="/coach-detail" element={<CoachDetail />} />
-
     </Routes>
+ <Footer/>
+</div>
   )
 }
 

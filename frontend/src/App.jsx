@@ -1,17 +1,18 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomeRoutes from './Routes/HomeRoutes'
-import Navbar from './components/ReuseAbleComponent/Navbar'
-import Footer from './components/ReuseAbleComponent/Footer'
+import MemberRoutes from './Routes/MemberRoutes'
+
 
 function App() {
   return (
     <div>
-      <Navbar/>
+      
       <Routes>
         <Route path='/*' element={<HomeRoutes />} />
+        <Route path='/member-home' element={<MemberRoutes />} />
       </Routes>
-      <Footer/>
+     
     </div>
   )
 }

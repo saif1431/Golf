@@ -5,7 +5,7 @@ import { Instagram, Twitter, Youtube, Facebook, Linkedin, ChevronDown, Search, S
 import CartDrawer from "./CartDrawer"
 import { Link } from "react-router-dom"
 
-export default function Navbar() {
+ function   MemberNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [coachingDropdownOpen, setCoachingDropdownOpen] = useState(false)
   const [cartOpen, setCartOpen] = useState(false)
@@ -19,14 +19,14 @@ export default function Navbar() {
             <div className="flex items-center justify-between h-10 text-sm">
               {/* Left - Member Login & News */}
               <div className="flex items-center space-x-6">
-                <Link to='/member-home' className="text-gray-900 hover:text-black relative group transition-colors duration-200">
+                <a href="#" className="text-gray-900 hover:text-black relative group transition-colors duration-200">
                   MEMBER LOGIN
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
-                </Link>
-                <Link to='/news' className="text-gray-900 hover:text-black relative group transition-colors duration-200">
+                </a>
+                <a href="#" className="text-gray-900 hover:text-black relative group transition-colors duration-200">
                   NEWS
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
-                </Link>
+                </a>
               </div>
 
               {/* Center - Social Icons */}
@@ -132,12 +132,13 @@ export default function Navbar() {
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <Link to='/member-home'
+                <a
+                  href="#"
                   className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
                 >
                   Member
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </Link>
+                </a>
               <Link to='/all-product' className="text-white font-medium">
                   Pro Shop
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
@@ -146,20 +147,7 @@ export default function Navbar() {
 
               {/* Right Icons */}
               <div className="flex items-center space-x-4">
-                <button className="text-gray-300 hover:text-gray-500 transition-colors duration-200">
-                  <Search className="w-5 h-5" />
-                </button>
-            <div 
-             onClick={() => setCartOpen(true)}
-            className=" relative">
-                  <button
-                 
-                  className="text-gray-300 hover:text-gray-500 transition-colors duration-200"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                </button>
-                <span className="text-gray-300 top-3 left-3 text-center  absolute text-xs bg-[#C51518] w-4 h-4 rounded-full flex items-center justify-center">3</span>
-            </div>
+           <button>Sign in</button>
 
                 {/* Mobile menu button */}
                 <button
@@ -208,3 +196,6 @@ export default function Navbar() {
     </>
   )
 }
+
+
+export default MemberNavbar

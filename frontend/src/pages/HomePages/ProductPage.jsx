@@ -1,8 +1,11 @@
 import React from 'react'
-import FilterProduct from '../components/ProShopComponent/FilterProduct'
-import ProductCard from '../components/ProShopComponent/ProductCard'
+
+
 import { Link } from 'react-router-dom'
-import ProductVideo from '../components/ProShopComponent/ProductVideo'
+
+import FilterProduct from '../../components/ProShopComponent/FilterProduct'
+import ProductCard from '../../components/ProShopComponent/ProductCard'
+import ProductVideo from '../../components/ProShopComponent/ProductVideo'
 
 function ProductPage() {
   return (
