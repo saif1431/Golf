@@ -19,7 +19,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between h-10 text-sm">
               {/* Left - Member Login & News */}
               <div className="flex items-center space-x-6">
-                <Link to='/member-home' className="text-gray-900 hover:text-black relative group transition-colors duration-200">
+                <Link to='/member/home' className="text-gray-900 hover:text-black relative group transition-colors duration-200">
                   MEMBER LOGIN
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <Link to='/member-home'
+                <Link to='/member/home'
                   className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
                 >
                   Member
@@ -192,9 +192,9 @@ export default function Navbar() {
                 <a href="#" className="text-white font-medium">
                   Contact
                 </a>
-                <a href="#" className="text-white font-medium">
+                <Link to='/member/home' className="text-white font-medium">
                   Member
-                </a>
+                </Link>
                 <Link to='/all-product' className="text-white font-medium">
                   Pro Shop
                 </Link>

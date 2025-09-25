@@ -1,67 +1,21 @@
 "use client"
 
 import { useState } from "react"
-import { Instagram, Twitter, Youtube, Facebook, Linkedin, ChevronDown, Search, ShoppingCart, Menu } from "lucide-react"
+import { Instagram, Twitter, Youtube, Facebook, Linkedin, ChevronDown, Menu } from "lucide-react"
 import CartDrawer from "./CartDrawer"
 import { Link } from "react-router-dom"
 
- function   MemberNavbar() {
+export default function MemberNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [coachingDropdownOpen, setCoachingDropdownOpen] = useState(false)
+  const [membershipOpen, setMembershipOpen] = useState(false)
+  const [mSystemOpen, setMSystemOpen] = useState(false)
+  const [playGameOpen, setPlayGameOpen] = useState(false)
   const [cartOpen, setCartOpen] = useState(false)
 
   return (
     <>
       <nav className="w-full bg-white">
-        {/* Top Bar */}
-        <div className="border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-10 text-sm">
-              {/* Left - Member Login & News */}
-              <div className="flex items-center space-x-6">
-                <a href="#" className="text-gray-900 hover:text-black relative group transition-colors duration-200">
-                  MEMBER LOGIN
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="#" className="text-gray-900 hover:text-black relative group transition-colors duration-200">
-                  NEWS
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
-                </a>
-              </div>
-
-              {/* Center - Social Icons */}
-              <div className="hidden md:flex items-center space-x-4">
-                <a href="#" className="text-gray-600 hover:text-black group transition-colors duration-200">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  <Youtube className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  {/* <Pinterest className="w-4 h-4" /> */}
-                </a>
-                <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Right - Country Selector */}
-              <div className="flex items-center space-x-2">
-                <div className="flex items-center space-x-1 text-gray-700">
-                  <span className="text-lg">🇺🇸</span>
-                  <span className="hidden sm:inline">United States (USD $)</span>
-                  <ChevronDown className="w-4 h-4" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
         {/* Main Navigation */}
         <div className="bg-black relative">
@@ -73,58 +27,87 @@ import { Link } from "react-router-dom"
               </Link>
 
               {/* Desktop Navigation */}
-              <div className="hidden md:flex text-lg items-center space-x-8">
-                <Link
-                  className="text-white hover:text-gray-300 font-medium relative group transition-colors duration-200"
-                  to="/join-our-movement"
+              <div className="hidden md:flex text-md items-center space-x-8">
+                {/* MemberShip with dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setMembershipOpen(true)}
+                  onMouseLeave={() => setMembershipOpen(false)}
                 >
-                  Join
+                  <Link
+                    to="/join-our-movement"
+                    className="text-white hover:text-gray-300 font-medium relative group transition-colors duration-200 flex items-center"
+                  >
+                    MemberShip
+                    <ChevronDown className="w-4 h-4 ml-1" />
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+
+                  {membershipOpen && (
+                    <div className="absolute left-0 top-full mt-2 bg-white shadow-lg py-4 rounded-md min-w-[220px] z-50">
+                      <Link to="/membership/benefits" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Benefits</Link>
+                      <Link to="/membership/pricing" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Pricing</Link>
+                      <Link to="/membership/faqs" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">FAQs</Link>
+                    </div>
+                  )}
+                </div>
+<Link to='/all-product' className="text-white font-medium">
+                Sports Connect
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                </Link>
+                {/* M-System with dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setMSystemOpen(true)}
+                  onMouseLeave={() => setMSystemOpen(false)}
+                >
+                  <Link
+                    to="/m-system"
+                    className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200 flex items-center"
+                  >
+                    M-System
+                    <ChevronDown className="w-4 h-4 ml-1" />
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+
+                  {mSystemOpen && (
+                    <div className="absolute left-0 top-full mt-2 bg-white shadow-lg py-4 rounded-md min-w-[220px] z-50">
+                      <Link to="/m-system/overview" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Overview</Link>
+                      <Link to="/m-system/courses" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Courses</Link>
+                      <Link to="/m-system/videos" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Videos</Link>
+                    </div>
+                  )}
+                </div>
+
+                {/* Play the Game with dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setPlayGameOpen(true)}
+                  onMouseLeave={() => setPlayGameOpen(false)}
+                >
+                  <Link
+                    to="#"
+                    className="text-gray-300 hover:text-white font-medium group transition-colors duration-200 flex items-center"
+                  >
+                    Play the Game
+                    <ChevronDown className="w-4 h-4 ml-1" />
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+
+                  {playGameOpen && (
+                    <div className="absolute left-0 top-full mt-2 bg-white shadow-lg py-4 rounded-md min-w-[220px] z-50">
+                      <Link to="/play/competitions" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Competitions</Link>
+                      <Link to="/play/scorecard" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Scorecard</Link>
+                      <Link to="/play/community" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Community</Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link to='/all-product' className="text-white font-medium">
+                  Pro Shop
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </Link>
 
-                <Link to='/news' className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200">
-                  News
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </Link>
-                <Link
-                  to="#"
-                  className="text-gray-300 hover:text-white font-medium  group transition-colors duration-200 flex items-center"
-                  onMouseEnter={() => setCoachingDropdownOpen(true)}
-                  onMouseLeave={() => setCoachingDropdownOpen(false)}
-                >
-                  Coaching
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-75 delay-300"></span>
-                  {/* Dropdown */}
-                  {coachingDropdownOpen && (
-                    <div
-                      className="absolute left-0 top-18 mt-2 bg-white shadow-lg  py-8 px-8 delay-300 min-w-full flex gap-18 z-50"
-                      onMouseEnter={() => setCoachingDropdownOpen(true)}
-                      onMouseLeave={() => setCoachingDropdownOpen(false)}
-                    >
-                      <div className="px-4  space-y-4">
-                        <h5 className="text-black">USA</h5>
-                        <div className="text-gray-500 flex flex-col space-y-2 text-sm">
-                          <Link to="/coach-detail">MIKE MALASKA -AZ</Link>
-                          <Link to="/coach-detail">MIKE MALASKA -AZ</Link>
-                        </div>
-                      </div>
-                      <div className="text-black space-y-4">
-                        <h5 className="text-black">INTERNATIONAL</h5>
-                        <div className="space-y-2 text-sm text-gray-500">
-                          <Link to="/coach-detail">MATT BAKER -UK</Link>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </Link>
-                <Link
-                  className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200 border-b-2 border-black"
-                  to="/about-us"
-                >
-                  About
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </Link>
                 <a
                   href="#"
                   className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
@@ -132,22 +115,16 @@ import { Link } from "react-router-dom"
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
-                >
-                  Member
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </a>
-              <Link to='/all-product' className="text-white font-medium">
-                  Pro Shop
+
+                <Link to='/all-product' className="text-white font-medium">
+                  Search
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </div>
 
               {/* Right Icons */}
               <div className="flex items-center space-x-4">
-           <button>Sign in</button>
+                <button className="text-white">Sign in</button>
 
                 {/* Mobile menu button */}
                 <button
@@ -165,23 +142,20 @@ import { Link } from "react-router-dom"
           {mobileMenuOpen && (
             <div className="md:hidden bg-black px-4 pb-4">
               <div className="flex flex-col space-y-4 mt-2">
-                <Link href="/join-our-movement" className="text-white font-medium">
-                  Join
+                <Link to="/join-our-movement" className="text-white font-medium">
+                  MemberShip
                 </Link>
-                <a href="#" className="text-white font-medium">
-                  News
-                </a>
-                <a href="#" className="text-white font-medium">
-                  Coaching
-                </a>
-                <Link href="/about-us" className="text-white font-medium">
+                <Link to="/m-system" className="text-white font-medium">
+                  M-System
+                </Link>
+                <Link to="/play" className="text-white font-medium">
+                  Play the Game
+                </Link>
+                <Link to="/about-us" className="text-white font-medium">
                   About
                 </Link>
                 <a href="#" className="text-white font-medium">
                   Contact
-                </a>
-                <a href="#" className="text-white font-medium">
-                  Member
                 </a>
                 <Link to='/all-product' className="text-white font-medium">
                   Pro Shop
@@ -196,6 +170,3 @@ import { Link } from "react-router-dom"
     </>
   )
 }
-
-
-export default MemberNavbar
