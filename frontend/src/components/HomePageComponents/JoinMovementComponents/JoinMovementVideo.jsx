@@ -6,7 +6,7 @@ function JoinMovementVideo() {
       {/* Video Background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="https://www.w3schools.com/html/mov_bbb.mp4" // Replace with your own .mp4 file later
+        src="/Golf1.mp4" 
         autoPlay
         muted
         loop
