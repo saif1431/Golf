@@ -1,65 +1,90 @@
+// ...existing code...
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { FaAnglesLeft } from "react-icons/fa6";
 
-export default function LoginForm() {
+
+function LoginForm() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  })
   const [error, setError] = useState('')
+
+  const handleChange = (e) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    setError('')
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!email || !password) {
-      setError('Please fill email and password.')
+    if (!form.email || !form.password || !form.firstName || !form.lastName) {
+      setError('Please complete all fields.')
       return
     }
-    // TODO: call API / login
-    console.log('login', { email, password })
-    navigate('/member') // adjust redirect as needed
+    if (form.password !== form.confirmPassword) {
+      setError('Passwords do not match.')
+      return
+    }
+
+    navigate('/')
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <div className="w-full max-w-sm bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-bold mb-4">Sign in</h2>
+    <div className="min-h-screen flex items-center justify-center bg-black  flex-col gap-6 py-10 px-4">
+      <div>
+        <img className='w-32' src="/logo.png" alt="" />
+      </div>
+      <div className="w-full max-w-lg bg-white rounded-lg shadow-lg py-8 lg:px-12 px-4">
+        <h2 className="text-3xl  text-center mt-4">Sign in to your account</h2>
 
         {error && <div className="text-red-600 text-sm mb-3">{error}</div>}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
+        <form onSubmit={handleSubmit} className="space-y-4 mt-12 ">
+          <div className='flex flex-col gap-1'>
+            <label className=" text-black">Email<sup className='text-red-400'>*</sup> </label>
             <input
               name="email"
               type="email"
-              value={email}
-              onChange={(e) => { setEmail(e.target.value); setError('') }}
-              placeholder="Email"
-              className="border rounded px-3 py-2 w-full"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="john@gmail.com"
+              className="border border-gray-300 rounded px-4 py-3 w-full"
             />
           </div>
 
-          <div>
+          <div className='flex flex-col gap-1'>
+            <label className="text-black">Password<sup className='text-red-400'>*</sup></label>
             <input
               name="password"
-              type="password"
-              value={password}
-              onChange={(e) => { setPassword(e.target.value); setError('') }}
-              placeholder="Password"
-              className="border rounded px-3 py-2 w-full"
+              value={form.password}
+              onChange={handleChange}
+              placeholder="*******"
+              className="border border-gray-300 rounded px-4 py-3 w-full"
             />
           </div>
+        
 
-          <button className="w-full bg-green-600 text-white py-2 rounded font-semibold hover:bg-green-700 transition">
-            Sign in
+
+          <button
+          style={{width: "100%"}}
+            type="submit"
+            className="btn-primary"
+          >
+            Login
           </button>
         </form>
 
         <p className="text-sm text-center text-gray-600 mt-4">
-          New here?{' '}
-          <Link to="/register" className="text-blue-600 hover:underline">
-            Create an account
+         Don't have an account?{' '}
+          <Link to="/member/register" className="text-blue-600 hover:underline">
+            Sign up
           </Link>
         </p>
       </div>
     </div>
   )
 }
+
+export default LoginForm

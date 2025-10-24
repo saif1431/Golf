@@ -1,18 +1,19 @@
 import React from 'react'
 import MemberNavbar from '../components/ReuseAbleComponent/MemberNavbar'
 import MemberHome from '../pages/MemberPages/MemberHome'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import RegisterForm from '../pages/RegisterForm'
 import LoginForm from '../pages/LoginForm'
 
 function MemberRoutes() {
+  const location = useLocation()
+  const hideNavbar = ['/member/register', '/member/login'].includes(location.pathname)
+
   return (
     <div>
-      <MemberNavbar /> {/* render navbar outside Routes */}
+      {!hideNavbar && <MemberNavbar />}
       <Routes>
-        {/* index renders at /member/ */}
         <Route index element={<MemberHome />} />
-        {/* /member/home */}
         <Route path="home" element={<MemberHome />} />
         <Route path="register" element={<RegisterForm />} />
         <Route path="login" element={<LoginForm />} />

@@ -51,10 +51,7 @@ export default function MemberNavbar() {
                     </div>
                   )}
                 </div>
-<Link to='/all-product' className="text-white font-medium">
-                Sports Connect
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </Link>
+
                 {/* M-System with dropdown */}
                 <div
                   className="relative"
@@ -78,6 +75,10 @@ export default function MemberNavbar() {
                     </div>
                   )}
                 </div>
+<Link to='/all-product' className="text-white font-medium">
+                Sports Connect
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                </Link>
 
                 {/* Play the Game with dropdown */}
                 <div
@@ -107,15 +108,6 @@ export default function MemberNavbar() {
                   Pro Shop
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </Link>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white font-medium relative group transition-colors duration-200"
-                >
-                  Contact
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-                </a>
-
                 <Link to='/all-product' className="text-white font-medium">
                   Search
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
@@ -124,7 +116,9 @@ export default function MemberNavbar() {
 
               {/* Right Icons */}
               <div className="flex items-center space-x-4">
+                <Link to='register'>
                 <button className="text-white">Sign in</button>
+                </Link>
 
                 {/* Mobile menu button */}
                 <button

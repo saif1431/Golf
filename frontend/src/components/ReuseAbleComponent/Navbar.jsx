@@ -192,7 +192,7 @@ export default function Navbar() {
                 <a href="#" className="text-white font-medium">
                   Contact
                 </a>
-                <Link to='/member/home' className="text-white font-medium">
+                <Link to='/member/' className="text-white font-medium">
                   Member
                 </Link>
                 <Link to='/all-product' className="text-white font-medium">
