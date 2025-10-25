@@ -116,7 +116,7 @@ export default function MemberNavbar() {
 
               {/* Right Icons */}
               <div className="flex items-center space-x-4">
-                <Link to='register'>
+                <Link to='/member/register'>
                 <button className="text-white">Sign in</button>
                 </Link>
 
